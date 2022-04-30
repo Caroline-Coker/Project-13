@@ -126,7 +126,6 @@ These Beats allow us to collect the following information from each machine:
   remote_user: carolinecoker
   become: true
   tasks:
-  
        Use apt module
     - name: Install docker.io
       apt:
