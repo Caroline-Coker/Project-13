@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![draw.io network diagram](https://github.com/Caroline-Coker/Project-13/blob/main/Images/Screen%20Shot%202022-04-30%20at%209.18.29%20AM.png)  
+![draw.io network diagram](https://github.com/Caroline-Coker/Project-13/blob/main/Images/draw.io%20network%20diagram%20.png)  
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _yml_ and _config_ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _yml_ and _config_ files may be used to install only certain pieces of it, such as Filebeat.
 
 **For ansible config edit**: 
 _cd /etc/ansible_
@@ -103,7 +103,7 @@ start and attach docker container using these commands:
  ssh into Elk VM with private IP address using this command:
  ssh [remote_user]@10.1.0.4
 
-![docker_ps.png](https://github.com/Caroline-Coker/Project-13/issues/1#issue-1221838359)
+![docker_ps.png](https://github.com/Caroline-Coker/Project-13/blob/main/Images/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -190,6 +190,9 @@ _curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/
 
 SSH into the control node and follow the steps below:
 - Copy the _'/etc/ansible/filebeat-config.yml'_ file to _/etc/ansible/filebeat-playbook.yml__.
+
+using the [Filebeat-config file example](https://github.com/Caroline-Coker/Project-13/blob/main/Ansible/filebeat-config.yml) copy to the [Filebeat playbook](https://github.com/Caroline-Coker/Project-13/blob/main/Ansible/filebeat-playbook.yml)
+
 - Update the filebeat.yml_ file to  'curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb'
 
 - use the command to change the file _nano filebeat-config.yml_ and changed to the following information
@@ -220,6 +223,8 @@ _curl -L -O https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557
 
 copy _/etc/metricbeat/metricbeat-config.yml_ to _/etc/metricbeat/metricbeat-playbook.yml_
 
+using the [Metricbeat config file example](https://github.com/Caroline-Coker/Project-13/blob/main/Ansible/metricbeat-config.yml) copy to the [Metricbeat playbook](https://github.com/Caroline-Coker/Project-13/blob/main/Ansible/metricbeat-playbook.yml)
+
 _nano metricbeat-config.yml_ and changed to the following:
 setup.kibana:
   host: "10.1.0.4:5601"
@@ -230,6 +235,4 @@ hosts: ["10.1.0.4:9200"]
 run the playbook using this command: _ansible-playbook metricbeat-playbook.yml_ and navigate to kibana > add metric data > docker metrics > module status to check data and installation success 
 
 **successful installation should look like:**
-[] (https://github.com/Caroline-Coker/Project-13/issues/2#issue-1221851296)
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+[Metricbeat installation success](https://github.com/Caroline-Coker/Project-13/blob/main/Images/Kibana%20Metricbeat%20successful%20installation.png)
