@@ -19,7 +19,7 @@ SSH key: copy id_rsa.pub from ansible control node in .ssh/ directory
 ssh-keygen
 cat id_rsa.pub
 
-  - _TODO: Enter the playbook file._
+  - [Elk playbook](https://github.com/Caroline-Coker/Project-13/tree/main/Ansible#:~:text=9%20minutes%20ago-,install%2Delk.yml,-new%20update)
 
 This document contains the following details:
 - Description of the Topologu
