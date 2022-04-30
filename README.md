@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![draw.io network diagram](https://github.com/Caroline-Coker/Project-13/blob/main/Images/draw.io%20network%20diagram%20.png)  
+![draw.io network diagram](https://github.com/Caroline-Coker/Project-13/blob/main/Diagrams/draw.io%20network%20diagram.png)  
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _yml_ and _config_ files may be used to install only certain pieces of it, such as Filebeat.
 
